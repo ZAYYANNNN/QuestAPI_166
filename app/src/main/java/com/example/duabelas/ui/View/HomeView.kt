@@ -39,7 +39,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.duabelas.R
 import com.example.duabelas.model.Mahasiswa
 import com.example.duabelas.navigation.DestinasiNavigasi
-import com.example.duabelas.ui.home.viewModel.CostumeTopAppBar
+import com.example.duabelas.ui.CostumeTopAppBar
 import com.example.duabelas.ui.home.viewModel.HomeUiState
 import com.example.duabelas.ui.home.viewModel.HomeViewModel
 import com.example.duabelas.ui.home.viewModel.PenyediaViewModel

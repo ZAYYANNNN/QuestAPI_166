@@ -21,7 +21,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.duabelas.navigation.DestinasiNavigasi
-import com.example.duabelas.ui.home.viewModel.CostumeTopAppBar
+import com.example.duabelas.ui.CostumeTopAppBar
 import com.example.duabelas.ui.home.viewModel.InsertUiEvent
 import com.example.duabelas.ui.home.viewModel.InsertUiState
 import com.example.duabelas.ui.home.viewModel.InsertViewModel

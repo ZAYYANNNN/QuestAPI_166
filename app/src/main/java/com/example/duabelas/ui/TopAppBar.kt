@@ -1,4 +1,4 @@
-package com.example.duabelas.ui.home
+package com.example.duabelas.ui
 
 import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
