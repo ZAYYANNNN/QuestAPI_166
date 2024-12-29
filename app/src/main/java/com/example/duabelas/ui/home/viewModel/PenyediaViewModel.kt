@@ -1,4 +1,4 @@
-package com.example.duabelas.ui.home
+package com.example.duabelas.ui.home.viewModel
 
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.CreationExtras
