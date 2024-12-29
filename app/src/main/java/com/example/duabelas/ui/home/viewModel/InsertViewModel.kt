@@ -1,4 +1,4 @@
-package com.example.duabelas.ui.home
+package com.example.duabelas.ui.home.viewModel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
