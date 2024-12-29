@@ -1,12 +1,22 @@
 package com.example.duabelas.service_api
 
+import com.example.duabelas.model.Mahasiswa
+import retrofit2.Response
+import retrofit2.http.Body
+import retrofit2.http.DELETE
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.POST
+import retrofit2.http.PUT
+import retrofit2.http.Query
+
 interface MahasiswaService {
     @Headers(
         "Accept: application/json",
         "Content-Type: application/json",
     )
 
-    @Get("bacamahasiswa.php")
+    @GET("bacamahasiswa.php")
     suspend fun getAllMahasiswa(): List<Mahasiswa>
 
     @GET("baca1mahasiswa.php/{nim}")
@@ -18,7 +28,7 @@ interface MahasiswaService {
     @PUT("editmahasiswa.php/{nim}")
     suspend fun updateMahasiswa(@Query("nim")nim:String, @Body mahasiswa:Mahasiswa)
     
-    @Delete("deletemahasiswa.php/{nim}")
+    @DELETE("deletemahasiswa.php/{nim}")
     suspend fun deleteMahasiswa(@Query("nim") nim:String): Response<Void>
 
 }
