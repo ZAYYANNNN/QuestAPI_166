@@ -15,16 +15,24 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.duabelas.navigation.DestinasiNavigasi
 import com.example.duabelas.ui.home.CostumeTopAppBar
+import com.example.duabelas.ui.home.HomeViewModel
 import com.example.duabelas.ui.home.InsertUiEvent
 import com.example.duabelas.ui.home.InsertUiState
 import com.example.duabelas.ui.home.InsertViewModel
 import kotlinx.coroutines.launch
+
+object DestinasiEntry:DestinasiNavigasi{
+    override val route = "item_entry"
+    override val titleRes = "Entry Mhs"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
