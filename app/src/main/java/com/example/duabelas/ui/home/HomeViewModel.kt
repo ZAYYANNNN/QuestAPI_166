@@ -8,6 +8,7 @@ import androidx.lifecycle.viewModelScope
 import coil.network.HttpException
 import com.example.duabelas.model.Mahasiswa
 import com.example.duabelas.repository.MahasiswaRepository
+import kotlinx.coroutines.launch
 import java.io.IOException
 
 sealed class HomeUiState {
@@ -23,17 +24,29 @@ class HomeViewModel (private val mhs: MahasiswaRepository): ViewModel(){
     init {
         getMhs()
     }
-}
-
-fun getMhs(){
-    viewModelScope.launch {
-        mhsUIState = HomeUiState.Loading
-        mhsUIState = try {
-            HomeUiState.Success(mhs.getMahasiswa())
-        }catch (e:IOException){
-            HomeUiState.Error
-        }catch (e: HttpException){
-            HomeUiState.Error
+    fun getMhs(){
+        viewModelScope.launch {
+            mhsUIState = HomeUiState.Loading
+            mhsUIState = try {
+                HomeUiState.Success(mhs.getMahasiswa())
+            }catch (e:IOException){
+                HomeUiState.Error
+            }catch (e: HttpException){
+                HomeUiState.Error
+            }
+        }
+    }
+    fun deleteMhs(nim:String){
+        viewModelScope.launch {
+            try {
+                mhs.deleteMahasiswa(nim)
+            }catch (e: IOException){
+                HomeUiState.Error
+            }catch (e:HttpException){
+                HomeUiState.Error
+            }
         }
     }
 }
+
+
