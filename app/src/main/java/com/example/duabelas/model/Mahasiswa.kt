@@ -1,7 +1,9 @@
 package com.example.duabelas.model
 
-import kotlinx.serialization.SerialName
+import kotlinx.serialization.*
 
+@OptIn(InternalSerializationApi::class)
+@Serializable
 data class Mahasiswa(
     val nim : String,
     val nama : String,
