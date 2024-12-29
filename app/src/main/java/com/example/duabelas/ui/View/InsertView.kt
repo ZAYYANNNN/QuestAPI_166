@@ -27,6 +27,7 @@ import com.example.duabelas.ui.home.HomeViewModel
 import com.example.duabelas.ui.home.InsertUiEvent
 import com.example.duabelas.ui.home.InsertUiState
 import com.example.duabelas.ui.home.InsertViewModel
+import com.example.duabelas.ui.home.PenyediaViewModel
 import kotlinx.coroutines.launch
 
 object DestinasiEntry:DestinasiNavigasi{
