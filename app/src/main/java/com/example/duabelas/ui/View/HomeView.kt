@@ -38,10 +38,16 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.duabelas.R
 import com.example.duabelas.model.Mahasiswa
+import com.example.duabelas.navigation.DestinasiNavigasi
 import com.example.duabelas.ui.home.CostumeTopAppBar
 import com.example.duabelas.ui.home.HomeUiState
 import com.example.duabelas.ui.home.HomeViewModel
 import com.example.duabelas.ui.home.PenyediaViewModel
+
+object DestinasiHome:DestinasiNavigasi{
+    override val route ="home"
+    override val titleRes = "Home Mhs"
+}
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
