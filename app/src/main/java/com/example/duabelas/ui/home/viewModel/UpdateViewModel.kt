@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.duabelas.model.Mahasiswa
 import com.example.duabelas.repository.MahasiswaRepository
+import com.example.duabelas.ui.View.DestinasiUpdate
 import kotlinx.coroutines.launch
 
 class UpdateViewModel(
