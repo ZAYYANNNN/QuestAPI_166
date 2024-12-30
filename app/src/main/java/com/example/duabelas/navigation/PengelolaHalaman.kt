@@ -29,7 +29,15 @@ fun PengelolaHalaman(
         composable(DestinasiHome.route){
             HomeScreen(
                 navigateToItemEntry = {navController.navigate(DestinasiEntry.route)},
-                onDetailClick = {
+                onDetailClick = { nim ->
+                    // Navigasi ke destinasi Detail dengan menyertakan nim
+                    navController.navigate("${DestinasiDetail.route}/$nim") {
+                        // Menggunakan popUpTo untuk memastikan navigasi ke Detail dan menghapus stack sebelumnya jika perlu
+                        popUpTo(DestinasiHome.route) {
+                            inclusive = true  // Termasuk juga destinasi yang akan dipopUp
+                        }
+                    }
+                    println("PengelolaHalaman: nim = $nim")
                 }
             )
         }
