@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.duabelas.model.Mahasiswa
 import com.example.duabelas.repository.MahasiswaRepository
+import com.example.duabelas.ui.View.DestinasiDetail
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
